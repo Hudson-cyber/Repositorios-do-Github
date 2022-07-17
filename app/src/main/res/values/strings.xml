@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Repositorios Github</string>
+    <string name="description_photo">Foto do usuário</string>
+    <string name="user_name">nome Usuário</string>
+    <string name="name_repository">nome repository</string>
+    <string name="star_Points">Quantidade de estrelas</string>
+</resources>
