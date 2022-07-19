@@ -13,5 +13,5 @@ class App : Application() {
             modules(listOf(locationModule))
         }
     }
->>>>>>> c5a357d (finalização de camadas)
+
 }
