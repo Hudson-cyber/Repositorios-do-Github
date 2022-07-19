@@ -6,37 +6,37 @@ data class OwnerGithub(
     @SerializedName("login")
     val login: String,
     @SerializedName("id")
-    val id: Long,
+    val id: Long?,
     @SerializedName("node_id")
-    val nodeId: String,
+    val nodeId: String?,
     @SerializedName("avatar_url")
-    val avatarUrl: String,
+    val avatarUrl: String?,
     @SerializedName("gravatar_id")
-    val gravatarId: String,
+    val gravatarId: String?,
     @SerializedName("url")
-    val url: String,
+    val url: String?,
     @SerializedName("html_url")
-    val htmlUrl: String,
+    val htmlUrl: String?,
     @SerializedName("followers_url")
-    val followersUrl: String,
+    val followersUrl: String?,
     @SerializedName("following_url")
-    val followingUrl: String,
+    val followingUrl: String?,
     @SerializedName("gists_url")
-    val gistsUrl: String,
+    val gistsUrl: String?,
     @SerializedName("starred_url")
-    val staredUrl: String,
+    val staredUrl: String?,
     @SerializedName("subscriptions_url")
-    val subscriptionsUrl: String,
+    val subscriptionsUrl: String?,
     @SerializedName("organizations_url")
-    val organizationsUrl: String,
+    val organizationsUrl: String?,
     @SerializedName("repos_url")
-    val reposUrl: String,
+    val reposUrl: String?,
     @SerializedName("events_url")
-    val eventsUrl: String,
+    val eventsUrl: String?,
     @SerializedName("received_events_url")
-    val receivedEventsUrl: String,
+    val receivedEventsUrl: String?,
     @SerializedName("type")
-    val type: String,
+    val type: String?,
     @SerializedName("site_admin")
-    val siteAdmin: Boolean
+    val siteAdmin: Boolean?
 )
