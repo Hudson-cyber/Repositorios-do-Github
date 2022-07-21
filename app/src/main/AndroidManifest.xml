@@ -18,7 +18,7 @@
         android:theme="@style/Theme.RepositoriosGithub"
         tools:targetApi="31">
         <activity
-            android:name="com.hudson.repositoriosgithub.view.activities.StarRepositoriesGithub"
+            android:name="com.hudson.repositoriosgithub.view.activities.StarRepositoriesGithubActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

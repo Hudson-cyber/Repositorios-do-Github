@@ -1,6 +1,5 @@
 package com.hudson.repositoriosgithub.data.models.repositories_response
 
-import ItemsGithub
 import com.google.gson.annotations.SerializedName
 
 data class DataGithub(

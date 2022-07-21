@@ -3,6 +3,7 @@ package com.hudson.repositoriosgithub.view.Adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
@@ -32,8 +33,14 @@ class RepositoriesGithubAdapter(private val list: List<AppDataGithub>) :
         fun bind(data: AppDataGithub) {
             with(itemView) {
                 val name = findViewById<TextView>(R.id.nameRepository)
+                val nameRepository = findViewById<TextView>(R.id.nameRepository)
+                val numberOfStars = findViewById<TextView>(R.id.starPoints)
+                val picture = findViewById<ImageView>(R.id.photoUser)
+                name.text = data.author.toString()
+                nameRepository.text = data.nameRepository.toString()
+                numberOfStars.text = data.numberOfStars.toString()
 
-                name.text = data.nameRepository.toString()
+
             }
         }
     }

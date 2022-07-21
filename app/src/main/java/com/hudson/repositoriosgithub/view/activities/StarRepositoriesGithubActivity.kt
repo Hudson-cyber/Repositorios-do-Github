@@ -1,27 +1,23 @@
 package com.hudson.repositoriosgithub.view.activities
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.driver.shopper.shopperentregador.core.network.CheckNetwork
-import com.driver.shopper.shopperentregador.core.network.InternetTrafficChecker
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.hudson.repositoriosgithub.R
 import com.hudson.repositoriosgithub.databinding.ActivityMainBinding
 import com.hudson.repositoriosgithub.view.Adapter.RepositoriesGithubAdapter
 import com.hudson.repositoriosgithub.view.view_model.StarRepositoriesGithubViewModel
-import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class StarRepositoriesGithub : AppCompatActivity() {
+
+class StarRepositoriesGithubActivity : AppCompatActivity() {
     //falta
     //Paginação Scroll infinito
     //push to update
 
     private lateinit var binding: ActivityMainBinding
-    val viewModelGit: StarRepositoriesGithubViewModel by viewModel()
-
-
-    val internetTraffic by inject<InternetTrafficChecker>()
+    private val viewModelGit: StarRepositoriesGithubViewModel by viewModel()
+   // val internetTraffic by inject<InternetTrafficChecker>()
     //private val checkNetwork by inject<CheckNetwork>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +29,11 @@ class StarRepositoriesGithub : AppCompatActivity() {
 
         viewModelGit.repositoriesLiveData.observe(this){
             val adapter = RepositoriesGithubAdapter(it)
+            val layoutManager = LinearLayoutManager(this)
+            layoutManager.orientation = LinearLayoutManager.VERTICAL
+            binding.recyclerRepository.layoutManager = layoutManager
             binding.recyclerRepository.adapter = adapter
+
         }
     }
 

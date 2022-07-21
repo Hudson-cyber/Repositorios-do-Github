@@ -137,8 +137,6 @@ data class DataRepositoryGithub(
     val disabled: Boolean?,
     @SerializedName("open_issues_count")
     val openIssuesCount: Long?,
-    @SerializedName("license")
-    val license: String?,
     @SerializedName("allow_forking")
     val allowForking: Boolean?,
     @SerializedName("is_template")

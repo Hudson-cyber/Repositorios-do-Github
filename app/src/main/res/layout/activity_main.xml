@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.activities.StarRepositoriesGithub">
+    tools:context=".view.activities.StarRepositoriesGithubActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerRepository"
-        android:layout_width="384dp"
-        android:layout_height="637dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.407"

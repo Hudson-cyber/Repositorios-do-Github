@@ -10,6 +10,6 @@ interface GithubServices {
     @GET("search/repositories?q=language:kotlin&sort=stars")
     suspend fun getRepositories(): Response<DataGithub>
 
-    @GET("users/")
+    @GET("users/{name}")
     suspend fun getUser(@Path("name") name: String): Response<DataUsersGithub>
 }
