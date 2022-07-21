@@ -1,7 +1,5 @@
 package com.hudson.repositoriosgithub.di
 
-import androidx.lifecycle.viewmodel.viewModelFactory
-import com.driver.shopper.shopperentregador.core.network.CheckNetwork
 import com.driver.shopper.shopperentregador.core.network.InternetTrafficChecker
 import com.hudson.repositoriosgithub.data.data_sources.GithubApiDataSource
 import com.hudson.repositoriosgithub.data.repositories.DataApiRepository
@@ -28,7 +26,7 @@ val locationModule = module {
     viewModel{
         StarRepositoriesGithubViewModel(get())
     }
-    single { CheckNetwork(get()) }
+//    single { CheckNetwork(get()) }
 
     single { InternetTrafficChecker() }
 

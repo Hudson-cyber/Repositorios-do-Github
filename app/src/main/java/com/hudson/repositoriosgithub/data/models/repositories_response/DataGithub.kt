@@ -1,5 +1,6 @@
 package com.hudson.repositoriosgithub.data.models.repositories_response
 
+import ItemsGithub
 import com.google.gson.annotations.SerializedName
 
 data class DataGithub(
@@ -8,5 +9,5 @@ data class DataGithub(
     @SerializedName("incomplete_results")
     val incompleteResults: Boolean?,
     @SerializedName("items")
-    val items: List<ItemsGithub>
+    val items: List<DataRepositoryGithub>
 )

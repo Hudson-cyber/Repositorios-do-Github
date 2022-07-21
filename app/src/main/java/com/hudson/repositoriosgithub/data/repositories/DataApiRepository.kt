@@ -1,6 +1,7 @@
 package com.hudson.repositoriosgithub.data.repositories
 
-import com.hudson.repositoriosgithub.data.models.repositories_response.ItemsGithub
+import ItemsGithub
+import com.hudson.repositoriosgithub.data.models.repositories_response.DataRepositoryGithub
 import com.hudson.repositoriosgithub.domain.data_sources.GithubAppDataSource
 import com.hudson.repositoriosgithub.domain.models.AppDataGithub
 import com.hudson.repositoriosgithub.domain.repositories.DataAppRepository
@@ -24,15 +25,15 @@ class DataApiRepository(private var dataSource: GithubAppDataSource) : DataAppRe
         }
     }
 
-    private suspend fun dataUser(repositories: ItemsGithub): AppDataGithub? {
-        val dataUserResponse = dataSource.getDataUser(repositories.dataRepository.owner.login)
+    private suspend fun dataUser(repositories: DataRepositoryGithub): AppDataGithub? {
+        val dataUserResponse = dataSource.getDataUser(repositories.owner.login)
         var repo : AppDataGithub? = null
         dataUserResponse.body().let { dataUser ->
             if (dataUserResponse.isSuccessful) {
                  repo = AppDataGithub(
-                    nameRepository = repositories.dataRepository.name,
+                    nameRepository = repositories.name,
                     author = dataUser?.name,
-                    numberOfStars = repositories.dataRepository.stargazersCount,
+                    numberOfStars = repositories.stargazersCount,
                     photoAuthor = dataUser?.avatarUrl
                 )
             }

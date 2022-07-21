@@ -12,9 +12,9 @@ class ApiGithubDataSource(private val api: GithubServices) : GithubDataSource {
             repositoriesResponse.body().let{
                 for (repositories in it!!.items) {
                         val repo = AppDataGithub(
-                            nameRepository = repositories.dataRepository.name,
+                            nameRepository = repositories.name,
                             author = "",
-                            numberOfStars = repositories.dataRepository.stargazersCount,
+                            numberOfStars = repositories.stargazersCount,
                             photoAuthor = ""
                         )
                     listAppGithub.add(repo)
